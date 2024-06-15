@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { User, db } from './firebase.js';
 import validator from 'validator';
+import { createRequire } from 'module';
 import nodemailer from 'nodemailer';
 const require = createRequire(import.meta.url);
 const dotenv = require('dotenv');
