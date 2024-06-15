@@ -3,7 +3,8 @@ import cors from 'cors';
 import { User, db } from './firebase.js';
 import validator from 'validator';
 import nodemailer from 'nodemailer';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
+require('dotenv').config();
 import { addDoc, collection, doc, getDoc, getDocs, query, updateDoc, where } from 'firebase/firestore';
 
 import cookieParser from 'cookie-parser';
