@@ -3,8 +3,9 @@ import cors from 'cors';
 import { User, db } from './firebase.js';
 import validator from 'validator';
 import nodemailer from 'nodemailer';
-// import dotenv from 'dotenv';
-require('dotenv').config();
+const require = createRequire(import.meta.url);
+const dotenv = require('dotenv');
+dotenv.config();
 import { addDoc, collection, doc, getDoc, getDocs, query, updateDoc, where } from 'firebase/firestore';
 
 import cookieParser from 'cookie-parser';
@@ -12,9 +13,9 @@ import cookieParser from 'cookie-parser';
 
 import EmailValidation from 'fakemail-guard';
 import bcrypt from 'bcryptjs';
-dotenv.config({
-    path: "./env"
-});
+// dotenv.config({
+//     path: "./env"
+// });
 
 
 const app = express();
